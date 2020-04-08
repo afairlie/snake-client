@@ -12,8 +12,8 @@ const connect = function() {
   // log successful connection - ensures next functions run after connection.
   conn.on('connect', () => {
     console.log('successfully connected to server 👍');
-  })
-  
+  });
+
   // write name (3 chars max) to server
   conn.write('Name: IAF');
 
