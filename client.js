@@ -8,6 +8,12 @@ const connect = function() {
     host: '10.0.2.15',
     port: 50541
   });
+
+  conn.on('connect', () => {
+    console.log('successfully connected to server 👍');
+  })
+
+  conn.write('Name: IAF');
   // interpret incoming data as text
   conn.setEncoding('utf8'); 
   conn.on('data', (data) => {
