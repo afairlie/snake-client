@@ -9,11 +9,14 @@ const connect = function() {
     port: 50541
   });
 
+  // log successful connection - ensures next functions run after connection.
   conn.on('connect', () => {
     console.log('successfully connected to server 👍');
   })
-
+  
+  // write name (3 chars max) to server
   conn.write('Name: IAF');
+
   // interpret incoming data as text
   conn.setEncoding('utf8'); 
   conn.on('data', (data) => {
