@@ -36,6 +36,18 @@ const handleUserInput = (key) => {
   if (key === 'd') {
     connection.write('Move: right')
   }
+  if (key === 'u') {
+    connection.write('Say: U can\'t beat me!')
+  }
+  if (key === 'i') {
+    connection.write('Say: I\'m kickin\'n ur butt')
+  }
+  if (key === 'o') {
+    connection.write('Say: OMG!')
+  }
+  if (key === 'p') {
+    connection.write('Say: Play nice ;)')
+  }
 }
 // https://nodejs.org/api/process.html#process_process_exit_code
 
