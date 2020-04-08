@@ -1,4 +1,5 @@
 const net = require('net');
+const {IP, PORT} = require('./constants');
 
 /**
  * Establishes connection with the game server
@@ -6,8 +7,8 @@ const net = require('net');
 const connect = function() {
   // establishing connection here - storing the connection net.connection in conn variable.
   const conn = net.createConnection({ 
-    host: 'localhost', // Vasily's public IP (135.23.222.148) for snake server, could also set to 'localhost'
-    port: 50541
+    host: IP, // Vasily's public IP (135.23.222.148) for snake server, could also set to 'localhost'
+    port: PORT
   });
 
   // log confirmation connection is successful - ensures next functions run after connection.
